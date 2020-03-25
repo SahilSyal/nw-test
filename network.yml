@@ -1,0 +1,10 @@
+- hosts: mysql
+  remote_user: root
+  gather_facts: true
+  roles:
+    - network
+
+#- hosts: localhost
+#  gather_facts: true
+#  roles:
+#    - copyContent

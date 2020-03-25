@@ -1,0 +1,26 @@
+network_ether_interfaces:
+       - device: ens13
+         bootproto: static
+         address: 192.168.122.15
+         netmask: 255.255.255.0
+         gateway: 192.168.122.1
+
+       - device: ens14
+         bootproto: static
+         address: 192.168.122.16
+         netmask: 255.255.255.0
+         gateway: 192.168.122.1
+
+network_bond_interfaces:
+        - device: bond0
+          bootproto: static
+          address: 192.168.122.17
+          netmask: 255.255.255.0
+          bond_mode: 802.3ad
+          bond_slaves: [ens15, ens16]
+
+          # Optional values
+          bond_miimon: 100
+          
+ 
+
